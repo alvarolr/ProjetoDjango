@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-def index(response):
-    return HttpResponse('Ola mundo')
+def index(request):
+    return render(request, 'hello/index.html')
 
 def harry(response):
     return HttpResponse('Ola Harry')
@@ -15,5 +15,5 @@ def rony(response):
 def hermione(response):
     return HttpResponse('Ola Hermione')
 
-def saudacao(response, name):
-    return HttpResponse(f'Ola {name}')
+def saudacao(request, name):
+    return render(request, 'hello/saudacao.html', {'name': name})
