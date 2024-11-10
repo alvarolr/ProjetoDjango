@@ -1,0 +1,12 @@
+h1{
+    font-family: sans-serif;
+    font-size: 90px;
+    text-align: center;
+    color: #fff
+}
+
+body{
+    display: grid;
+    place-items: center;
+    background-color: #000;
+}

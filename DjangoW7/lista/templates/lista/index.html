@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Itens</title>
+</head>
+<body>
+    <h1>Lista de Itens</h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="item_name" placeholder="Novo Item">
+        <button type="submit">Adicionar</button>
+    </form>
+
+    
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
